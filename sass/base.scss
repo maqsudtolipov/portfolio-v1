@@ -1,5 +1,10 @@
 /*** ***/
 $bg-color: #10151c;
+$sh-color: #7e8597;
+
+$color-white: #fff;
+$color-main: #2663ff;
+$color-main-t1: #2259e6;
 
 /*** * ***/
 // BASE STYLING
@@ -16,7 +21,11 @@ html {
 }
 
 body {
-  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  line-height: 1;
   color: #fff;
   background-color: $bg-color;
+
+  // test
+  min-height: 100vh;
 }

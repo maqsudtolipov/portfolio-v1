@@ -1,5 +1,19 @@
 /*** THESE ARE REUABLE COMPONENTS ALL ***/
+// typograyphy
+.heading-primary {
+  color: $color-white;
+  font-size: 3.6rem;
+  font-weight: 600;
+  line-height: 6.4rem;
+  letter-spacing: 0.95px;
+  margin-bottom: 6.4rem;
 
+  span {
+    color: $color-main;
+  }
+}
+
+// container
 .container {
   max-width: 120rem;
   padding: 0 3.2rem;
@@ -10,4 +24,31 @@
 .grid {
   display: grid;
   gap: 9.6rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+// button
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.8rem;
+  padding: 1.2rem 2.4rem;
+  border-radius: 0.6rem;
+
+  transition: all 0.2s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  color: $color-white;
+  background-color: $color-main;
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: $color-main-t1;
 }

@@ -13,9 +13,105 @@ html {
 }
 
 body {
-  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  line-height: 1;
   color: #fff;
   background-color: #10151c;
+  min-height: 100vh;
+}
+
+/*** THESE ARE REUABLE COMPONENTS ALL ***/
+.heading-primary {
+  color: #fff;
+  font-size: 3.6rem;
+  font-weight: 600;
+  line-height: 6.4rem;
+  letter-spacing: 0.95px;
+  margin-bottom: 6.4rem;
+}
+.heading-primary span {
+  color: #2663ff;
+}
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.8rem;
+  padding: 1.2rem 2.4rem;
+  border-radius: 0.6rem;
+  transition: all 0.2s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  color: #fff;
+  background-color: #2663ff;
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: #2259e6;
+}
+
+/*** HEADER ***/
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 9.6rem;
+  padding: 0 6.4rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.logo img {
+  height: 3.2rem;
+}
+.logo span {
+  font-size: 1.8rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+}
+.nav-link:link, .nav-link:visited {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+/*** HERO ***/
+.section-hero {
+  padding: 9.6rem 0;
+}
+
+.hero-subheading {
+  color: #7e8597;
+  font-size: 2.2rem;
+  width: 30ch;
+  margin-bottom: 4.8rem;
 }
 
 /*# sourceMappingURL=style.css.map */
