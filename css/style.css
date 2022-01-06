@@ -26,6 +26,16 @@ body {
   color: #e9efff;
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(38, 99, 255, 0.5);
+  width: 100px;
+}
+
 /*** THESE ARE REUABLE COMPONENTS ALL ***/
 .heading-primary,
 .heading-secondary {
