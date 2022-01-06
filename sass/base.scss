@@ -25,7 +25,8 @@ html {
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1;
-  color: #fff;
+  font-weight: 400;
+  color: $color-text-primary;
   background-color: $bg-color;
 
   // test

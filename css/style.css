@@ -15,7 +15,8 @@ html {
 body {
   font-family: "Inter", sans-serif;
   line-height: 1;
-  color: #fff;
+  font-weight: 400;
+  color: #e9efff;
   background-color: #10151c;
   min-height: 100vh;
 }
@@ -53,6 +54,7 @@ body {
 
 .heading-secondary {
   font-size: 4.4rem;
+  margin-bottom: 9.6rem;
 }
 
 .container {
@@ -63,11 +65,21 @@ body {
 
 .grid {
   display: grid;
-  gap: 9.6rem;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
 }
 
 .grid--2-cols {
   grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--works {
+  column-gap: 3.2rem;
+  row-gap: 4.8rem;
 }
 
 .center-text {
@@ -143,6 +155,32 @@ body {
   font-size: 2.2rem;
   width: 30ch;
   margin-bottom: 4.8rem;
+}
+
+/*** PORTFOLIO ***/
+.section-portfolio {
+  padding: 9.6rem 0;
+}
+
+.work__img {
+  overflow: hidden;
+  margin-bottom: 1.6rem;
+}
+.work__img img {
+  width: 100%;
+  transition: all 0.3s;
+}
+.work__img img:hover {
+  transform: scale(1.05);
+}
+.work__title {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+.work__info {
+  font-size: 1.4rem;
+  color: #7e8597;
 }
 
 /*# sourceMappingURL=style.css.map */
