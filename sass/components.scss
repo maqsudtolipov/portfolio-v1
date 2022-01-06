@@ -15,7 +15,7 @@
   width: 75%;
 
   span {
-    color: $color-main;
+    color: $color-primary;
   }
 }
 
@@ -77,12 +77,12 @@
 .btn--full:link,
 .btn--full:visited {
   color: $color-white;
-  background-color: $color-main;
+  background-color: $color-primary;
 }
 
 .btn--full:hover,
 .btn--full:active {
-  background-color: $color-main-t1;
+  background-color: $color-secondary;
 }
 
 .btn--nav:link,

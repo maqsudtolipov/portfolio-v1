@@ -189,5 +189,41 @@ body {
   padding: 6.4rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
+.footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  text-decoration: none;
+  color: #e9efff;
+}
+.footer__logo img {
+  height: 3.2rem;
+}
+.footer__logo span {
+  font-size: 1.8rem;
+}
+
+/*** SOCIAL ***/
+.social {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 3.6rem 4.8rem;
+}
+
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #2663ff;
+  transition: all 0.3s;
+}
+
+.social-icon:hover {
+  color: #2259e6;
+  transform: scale(1.1) translateY(-0.4rem);
+}
 
 /*# sourceMappingURL=style.css.map */

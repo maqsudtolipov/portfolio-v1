@@ -3,8 +3,8 @@ $bg-color: #10151c;
 $sh-color: #7e8597;
 
 $color-white: #fff;
-$color-main: #2663ff;
-$color-main-t1: #2259e6;
+$color-primary: #2663ff;
+$color-secondary: #2259e6;
 
 $color-text-primary: #e9efff;
 
@@ -35,6 +35,6 @@ body {
 
 // other but necessary
 ::selection {
-  background-color: rgba($color-main, 0.8);
+  background-color: rgba($color-primary, 0.8);
   color: $color-text-primary;
 }
