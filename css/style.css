@@ -172,6 +172,7 @@ body {
 }
 .work__img img:hover {
   transform: scale(1.05);
+  cursor: pointer;
 }
 .work__title {
   font-size: 2.4rem;
