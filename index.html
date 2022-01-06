@@ -114,20 +114,20 @@
               <h2 class="cta__heading">Want to get in touch?</h2>
             </div>
             <div class="cta-form-box">
-              <form action="https://formspree.io/f/meqnongr" class="cta__form">
+              <form action="https://formspree.io/f/meqnongr" method="POST" class="cta__form">
                 <div>
                   <label for="full-name">Full Name</label>
-                  <input type="text" name="full-name" id="full-name" placeholder="Enter your Full Name"/>
+                  <input type="text" name="full-name" id="full-name" placeholder="Enter your Full Name" required/>
                 </div>
 
                 <div>
                   <label for="email">Email</label>
-                  <input type="email" name="email" id="email" placeholder="Enter your Email"/>
+                  <input type="email" name="email" id="email" placeholder="Enter your Email" required/>
                 </div>
 
                 <div>
                   <label for="message">Message</label>
-                  <textarea name="message" id="message" placeholder="Enter your Message"></textarea>
+                  <textarea name="message" id="message" placeholder="Enter your Message" required></textarea>
                 </div>
 
                 <button type="submit" class="btn btn--full">Send Message</button>
