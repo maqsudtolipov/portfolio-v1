@@ -261,7 +261,7 @@ body {
 .cta textarea {
   width: 100%;
   padding: 1.2rem;
-  border: 1px solid rgba(233, 239, 255, 0.5);
+  border: none;
   border-radius: 4px;
   font-family: inherit;
   font-size: 1.6rem;
