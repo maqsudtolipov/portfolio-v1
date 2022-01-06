@@ -52,3 +52,8 @@
 .btn--full:active {
   background-color: $color-main-t1;
 }
+
+.btn--nav:link,
+.btn--nav:visited {
+  padding: 0.8rem 1.6rem;
+}

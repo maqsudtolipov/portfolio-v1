@@ -69,6 +69,11 @@ body {
   background-color: #2259e6;
 }
 
+.btn--nav:link,
+.btn--nav:visited {
+  padding: 0.8rem 1.6rem;
+}
+
 /*** HEADER ***/
 .header {
   display: flex;
