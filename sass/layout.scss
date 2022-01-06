@@ -109,6 +109,80 @@
   }
 }
 
+/*** CONTACT SECTION ***/
+.section-contact {
+  padding: 9.6rem 0;
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 6.4rem;
+  border: 2px solid #133280;
+  border-radius: 11px;
+  box-shadow: 0 3.6rem 6.4rem rgba(#133280, 0.1);
+
+  // temp
+  height: 50rem;
+
+  &__heading {
+    font-size: 6.2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.75px;
+  }
+
+  // form
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2.4rem;
+    column-gap: 3.2rem;
+    color: rgba($color-text-primary, 0.75);
+
+    label {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  div:nth-child(3) {
+    grid-column: 1 / -1;
+    min-height: 4.8rem;
+
+    textarea {
+      height: 16rem;
+    }
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 1.2rem;
+    border: 1px solid rgba($color-text-primary, 0.5);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1.6rem;
+    color: $color-text-primary;
+    background-color: rgba($color-text-primary, 0.1);
+    transition: all 0.3s;
+    box-shadow: 0 1px 2px #0000001a;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: rgba($color-text-primary, 0.8);
+  }
+
+  *:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.6rem rgba(#d4e0ff, 0.5);
+    
+  }
+}
+
 /*** SOCIAL ***/
 .social {
   position: fixed;
