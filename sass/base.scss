@@ -6,6 +6,8 @@ $color-white: #fff;
 $color-main: #2663ff;
 $color-main-t1: #2259e6;
 
+$color-text-primary: #e9efff;
+
 /*** * ***/
 // BASE STYLING
 *,
@@ -28,4 +30,10 @@ body {
 
   // test
   min-height: 100vh;
+}
+
+// other but necessary
+::selection {
+  background-color: rgba($color-main, 0.8);
+  color: $color-text-primary;
 }
