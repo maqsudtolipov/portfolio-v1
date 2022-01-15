@@ -173,9 +173,53 @@
 
   /*** CONTACT SECTION ***/
   .cta {
+    grid-template-columns: 2fr 3fr;
+    column-gap: 2.4rem;
     &__form {
       grid-template-columns: 1fr;
     }
+  }
+}
+
+////////////////////////////////////////////////
+/// Smaller tablets
+@media screen and (max-width: 44em) {
+  .heading-secondary {
+    margin-bottom: 6.4rem;
+  }
+}
+
+////////////////////////////////////////////////
+/// Phones
+@media screen and (max-width: 34em) {
+  .grid {
+    row-gap: 4.8rem;
+  }
+
+  .grid--works {
+    grid-template-columns: 1fr;
+  }
+
+  /*** HERO ***/
+  .hero-text-box {
+    padding: 0 0;
+  }
+
+  /*** PORTFOLIO ***/
+  .work {
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__info {
+      font-size: 1.2rem;
+    }
+  }
+
+  /*** CONTACT SECTION ***/
+  .cta {
+    grid-template-columns: 1fr;
+    row-gap: 2.4rem;
   }
 }
 
