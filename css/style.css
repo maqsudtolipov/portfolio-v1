@@ -10,7 +10,6 @@
 
 html {
   font-size: 62.5%;
-  overflow-x: hidden;
 }
 
 body {
@@ -19,6 +18,7 @@ body {
   font-weight: 400;
   color: #e9efff;
   background-color: #10151c;
+  overflow-x: hidden;
   min-height: 100vh;
 }
 
