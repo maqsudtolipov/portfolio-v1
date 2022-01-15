@@ -101,7 +101,7 @@ body {
 .btn:visited {
   display: inline-block;
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: 2rem;
   padding: 1.2rem 2.4rem;
   border-radius: 0.6rem;
   border: none;
@@ -299,6 +299,87 @@ body {
   font-size: 2.4rem;
 }
 
+@media screen and (max-width: 75em) {
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .heading-primary {
+    font-size: 4.8rem;
+  }
+
+  .heading-secondary {
+    font-size: 3.2rem;
+  }
+
+  .subheading {
+    font-size: 1.4rem;
+  }
+
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+
+  .grid--works {
+    column-gap: 2.4rem;
+    row-gap: 3.2rem;
+  }
+
+  .btn,
+.btn:link,
+.btn:visited {
+    font-size: 2rem;
+    padding: 0.8rem 1.6rem;
+  }
+
+  /*** HERO ***/
+  .hero-description {
+    font-size: 1.8rem;
+  }
+
+  .work__title {
+    font-size: 2rem;
+  }
+  .work__info {
+    font-size: 1.2rem;
+  }
+
+  /*** CONTACT SECTION ***/
+  .cta {
+    padding: 4.8rem;
+  }
+  .cta__heading {
+    font-size: 5.2rem;
+  }
+  .cta__form {
+    row-gap: 1.6rem;
+    column-gap: 2.4rem;
+  }
+  .cta__form label {
+    font-size: 1.4rem;
+  }
+  .cta input,
+.cta textarea {
+    font-size: 1.4rem;
+  }
+
+  .footer__logo {
+    gap: 0.8rem;
+  }
+  .footer__logo img {
+    height: 2.4rem;
+  }
+  .footer__logo span {
+    font-size: 1.6rem;
+  }
+  .footer__social-icons {
+    gap: 2rem;
+  }
+  .footer__social-icon ion-icon {
+    font-size: 2rem;
+  }
+}
 /*
 ### Font sizes
 - 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98

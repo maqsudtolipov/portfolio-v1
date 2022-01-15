@@ -1,7 +1,98 @@
 ////////////////////////////////////////////////
 /// Smaller laptops
-@media screen and (max-width: 85em) {
-  
+@media screen and (max-width: 75em) {
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .heading-primary {
+    font-size: 4.8rem;
+  }
+
+  .heading-secondary {
+    font-size: 3.2rem;
+  }
+
+  .subheading {
+    font-size: 1.4rem;
+  }
+
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+
+  .grid--works {
+    column-gap: 2.4rem;
+    row-gap: 3.2rem;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    font-size: 2rem;
+    padding: 0.8rem 1.6rem;
+  }
+
+  /*** HERO ***/
+  .hero-description {
+    font-size: 1.8rem;
+  }
+
+  .work {
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__info {
+      font-size: 1.2rem;
+    }
+  }
+
+  /*** CONTACT SECTION ***/
+  .cta {
+    padding: 4.8rem;
+
+    &__heading {
+      font-size: 5.2rem;
+    }
+
+    &__form {
+      row-gap: 1.6rem;
+      column-gap: 2.4rem;
+
+      label {
+        font-size: 1.4rem;
+      }
+    }
+
+    input,
+    textarea {
+      font-size: 1.4rem;
+    }
+  }
+
+  .footer {
+    &__logo {
+      gap: 0.8rem;
+
+      img {
+        height: 2.4rem;
+      }
+
+      span {
+        font-size: 1.6rem;
+      }
+    }
+
+    &__social-icons {
+      gap: 2rem;
+    }
+
+    &__social-icon ion-icon {
+      font-size: 2rem;
+    }
+  }
 }
 
 /*
