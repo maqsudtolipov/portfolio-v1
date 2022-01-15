@@ -1,12 +1,12 @@
 ////////////////////////////////////////////////
-/// Smaller laptops
+/// Landscape tablets
 @media screen and (max-width: 75em) {
   .header {
     padding: 0 3.2rem;
   }
 
   .heading-primary {
-    font-size: 4.8rem;
+    font-size: 4.4rem;
   }
 
   .heading-secondary {
@@ -39,6 +39,7 @@
     font-size: 1.8rem;
   }
 
+  /*** PORTFOLIO ***/
   .work {
     &__title {
       font-size: 2rem;
@@ -91,6 +92,37 @@
 
     &__social-icon ion-icon {
       font-size: 2rem;
+    }
+  }
+}
+
+////////////////////////////////////////////////
+/// Tablets
+@media screen and (max-width: 59em) {
+  .hero-text-box {
+    text-align: center;
+    padding: 0 6.4rem;
+  }
+
+  .heading-primary {
+    width: auto;
+    font-size: 3.6rem;
+  }
+
+  .grid--works {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-description {
+    width: auto;
+  }
+
+  /*** PORTFOLIO ***/
+
+  /*** CONTACT SECTION ***/
+  .cta {
+    &__form {
+      grid-template-columns: 1fr;
     }
   }
 }
