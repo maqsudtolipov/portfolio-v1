@@ -3,9 +3,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative; 
   height: 9.6rem;
   // maybe change it to 4.8 later
   padding: 0 6.4rem;
+
 }
 
 .logo {

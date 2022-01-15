@@ -10,6 +10,7 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -19,7 +20,6 @@ body {
   color: #e9efff;
   background-color: #10151c;
   overflow-x: hidden;
-  min-height: 100vh;
 }
 
 ::selection {
@@ -149,6 +149,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
   height: 9.6rem;
   padding: 0 6.4rem;
 }

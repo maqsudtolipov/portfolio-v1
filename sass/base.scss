@@ -21,6 +21,7 @@ $color-text-secondary: #bed0ff;
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -30,9 +31,6 @@ body {
   color: $color-text-primary;
   background-color: $bg-color;
   overflow-x: hidden;
-
-  // test
-  min-height: 100vh;
 }
 
 // other but necessary
