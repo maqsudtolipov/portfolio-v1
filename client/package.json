@@ -4,8 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel index.html"
   },
   "author": "maqsudtolipov",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "parcel": "^2.5.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.5.0"
+  }
 }
