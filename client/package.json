@@ -13,6 +13,9 @@
     "parcel": "^2.5.0"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.5.0"
+    "@parcel/config-webextension": "^2.5.0",
+    "@parcel/packager-raw-url": "^2.5.0",
+    "@parcel/transformer-sass": "^2.5.0",
+    "@parcel/transformer-webmanifest": "^2.5.0"
   }
 }
