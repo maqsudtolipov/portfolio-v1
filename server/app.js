@@ -4,12 +4,51 @@ const app = express();
 
 app.use(express.json());
 
+// projects
+const projects = [
+  {
+    id: "1",
+    title: "Project 1",
+    description: "Description 1",
+  },
+  {
+    id: "2",
+    title: "Project 2",
+    description: "Description 2",
+  },
+  {
+    id: "3",
+    title: "Project 3",
+    description: "Description 3",
+  },
+];
+
 app.get("/api/v1/projects", (req, res) => {
-  res.json({
-    success: true,
-    message: "Projects fetched successfully",
+  res.status(200).json({
+    status: "success",
+    results: projects.length,
     data: {
-      projects: [],
+      projects,
+    },
+  });
+});
+
+app.get("/api/v1/projects/:id", (req, res) => {
+  console.log(req.params);
+
+  if (!project) {
+    return res.status(404).json({
+      status: "fail",
+      message: "Project not found",
+    });
+  }
+
+  const project = projects.find((el) => el.id === req.params.id);
+
+  res.status(200).json({
+    status: "success",
+    data: {
+      project,
     },
   });
 });
@@ -18,9 +57,9 @@ app.post("/api/v1/projects", (req, res) => {
   // console.log(req.body);
 
   res.status(201).json({
-    success: true,
+    status: "success",
     data: {
-      project: req.body,
+      projects: req.body,
     },
   });
 });
