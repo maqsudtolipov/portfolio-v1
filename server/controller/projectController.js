@@ -17,6 +17,18 @@ const projects = [
   },
 ];
 
+//-- Param middleware
+exports.checkID = (req, res, next, val) => {
+  console.log(req.params.id * 1, projects.length);
+  if (req.params.id * 1 > projects.length) {
+    return res.status(404).json({
+      status: "fail",
+      message: "Invalid ID",
+    });
+  }
+  next();
+};
+
 exports.getAllProjects = (req, res) => {
   res.status(200).json({
     status: "success",
@@ -30,14 +42,7 @@ exports.getAllProjects = (req, res) => {
 exports.getProject = (req, res) => {
   console.log(req.params);
 
-  exports.project = projects.find((el) => el.id === req.params.id);
-
-  if (!project) {
-    return res.status(404).json({
-      status: "fail",
-      message: "Project not found",
-    });
-  }
+  project = projects.find((el) => el.id === req.params.id);
 
   res.status(200).json({
     status: "success",
