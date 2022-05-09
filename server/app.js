@@ -1,8 +1,12 @@
 const express = require("express");
 const app = express();
 
-app.get("/", (req, res) => {
-  res.status(200).json({ message: "📢 Hello from the server" });
+app.get("/api/v1/projects", (req, res) => {
+  res.json({
+    success: true,
+    message: "Projects fetched successfully",
+    projects: [],
+  });
 });
 
 const port = 1000;
