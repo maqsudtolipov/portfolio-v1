@@ -36,14 +36,14 @@ app.get("/api/v1/projects", (req, res) => {
 app.get("/api/v1/projects/:id", (req, res) => {
   console.log(req.params);
 
+  const project = projects.find((el) => el.id === req.params.id);
+
   if (!project) {
     return res.status(404).json({
       status: "fail",
       message: "Project not found",
     });
   }
-
-  const project = projects.find((el) => el.id === req.params.id);
 
   res.status(200).json({
     status: "success",
@@ -60,6 +60,15 @@ app.post("/api/v1/projects", (req, res) => {
     status: "success",
     data: {
       projects: req.body,
+    },
+  });
+});
+
+app.patch("/api/v1/projects/:id", (req, res) => {
+  res.status(200).json({
+    status: "success",
+    data: {
+      tour: "<updated tour>",
     },
   });
 });
