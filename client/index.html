@@ -239,13 +239,5 @@
 
     <!-- my own js file -->
     <script src="js/app.js"></script>
-
-    <!-- register service worker -->
-    <script type="module">
-      navigator.serviceWorker.register(
-        new URL("service-worker.js", import.meta.url),
-        { type: "module" }
-      );
-    </script>
   </body>
 </html>
