@@ -4,7 +4,8 @@
   "description": "",
   "default": "index.html",
   "scripts": {
-    "start": "node app.js"
+    "start": "node server.js",
+    "start-dev": "nodemon server.js"
   },
   "author": "maqsudtolipov",
   "license": "MIT",
