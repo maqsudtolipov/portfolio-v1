@@ -1,11 +1,27 @@
 const express = require("express");
+
 const app = express();
+
+app.use(express.json());
 
 app.get("/api/v1/projects", (req, res) => {
   res.json({
     success: true,
     message: "Projects fetched successfully",
-    projects: [],
+    data: {
+      projects: [],
+    },
+  });
+});
+
+app.post("/api/v1/projects", (req, res) => {
+  // console.log(req.body);
+
+  res.status(201).json({
+    success: true,
+    data: {
+      project: req.body,
+    },
   });
 });
 
