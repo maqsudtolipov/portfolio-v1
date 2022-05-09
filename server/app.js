@@ -1,3 +1,4 @@
+const dotenv = require("dotenv");
 const express = require("express");
 
 const app = express();
@@ -73,7 +74,7 @@ app.patch("/api/v1/projects/:id", (req, res) => {
   });
 });
 
-const port = 1000;
+const port = process.env.PORT || 1000;
 app.listen(port, () => {
   console.log(`💎 Server is running on port ${port}`);
 });
