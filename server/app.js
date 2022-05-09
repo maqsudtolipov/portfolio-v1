@@ -26,7 +26,7 @@ const projects = [
   },
 ];
 
-app.get("/api/v1/projects", (req, res) => {
+const getAllProjects = (req, res) => {
   res.status(200).json({
     status: "success",
     results: projects.length,
@@ -34,9 +34,9 @@ app.get("/api/v1/projects", (req, res) => {
       projects,
     },
   });
-});
+};
 
-app.get("/api/v1/projects/:id", (req, res) => {
+const getProject = (req, res) => {
   console.log(req.params);
 
   const project = projects.find((el) => el.id === req.params.id);
@@ -54,9 +54,9 @@ app.get("/api/v1/projects/:id", (req, res) => {
       project,
     },
   });
-});
+};
 
-app.post("/api/v1/projects", (req, res) => {
+const createProject = (req, res) => {
   // console.log(req.body);
 
   res.status(201).json({
@@ -65,16 +65,31 @@ app.post("/api/v1/projects", (req, res) => {
       projects: req.body,
     },
   });
-});
+};
 
-app.patch("/api/v1/projects/:id", (req, res) => {
+const updateProject = (req, res) => {
   res.status(200).json({
     status: "success",
     data: {
       tour: "<updated tour>",
     },
   });
-});
+};
+
+const deleteProject = (req, res) => {
+  res.status(204).json({
+    status: "success",
+    data: null,
+  });
+};
+
+app.route("/api/v1/projects").get(getAllProjects).post(createProject);
+
+app
+  .route("/api/v1/projects/:id")
+  .get(getProject)
+  .patch(updateProject)
+  .delete(deleteProject);
 
 const port = process.env.PORT || 1000;
 app.listen(port, () => {
