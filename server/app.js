@@ -3,6 +3,8 @@ const express = require("express");
 
 const app = express();
 
+dotenv.config({ path: "./config.env" });
+
 app.use(express.json());
 
 // projects
