@@ -1,11 +1,20 @@
 const dotenv = require("dotenv");
 const express = require("express");
+const morgan = require("morgan");
 
 const app = express();
 
 dotenv.config({ path: "./config.env" });
 
+// Middlewares
+app.use(morgan("dev"));
+
 app.use(express.json());
+
+app.use((req, res, next) => {
+  console.log("I am the middleware d;)");
+  next();
+});
 
 // projects
 const projects = [
@@ -83,13 +92,19 @@ const deleteProject = (req, res) => {
   });
 };
 
-app.route("/api/v1/projects").get(getAllProjects).post(createProject);
+// Routes
+const projectRouter = express.Router();
+
+
+app.route("/").get(getAllProjects).post(createProject);
 
 app
-  .route("/api/v1/projects/:id")
+  .route("/:id")
   .get(getProject)
   .patch(updateProject)
   .delete(deleteProject);
+
+  app.use("/api/v1/projects", projectRouter);
 
 const port = process.env.PORT || 1000;
 app.listen(port, () => {
