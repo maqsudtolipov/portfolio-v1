@@ -3,11 +3,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative; 
+  position: relative;
   height: 9.6rem;
   // maybe change it to 4.8 later
   padding: 0 6.4rem;
-
 }
 
 .logo {
@@ -45,7 +44,6 @@
   padding: 9.6rem 0;
 }
 
-
 .hero-description {
   font-size: 2rem;
   color: $sh-color;
@@ -68,6 +66,7 @@
     img {
       width: 100%;
       transition: all 0.3s;
+      border-radius: 4px;
     }
 
     img:hover {
@@ -88,11 +87,10 @@
   }
 }
 
-
-
 /*** CONTACT SECTION ***/
 .section-contact {
-  padding: 6.4rem 0 9.6rem 0;
+  padding: 12.8rem 0 14rem 0;
+  background-image: url("../img/contact.jpg");
 }
 
 .cta {
@@ -102,6 +100,10 @@
   border: 2px solid #133280;
   border-radius: 11px;
   box-shadow: 0 3.6rem 6.4rem rgba(#133280, 0.1);
+  background-color: #10151c9e;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.3px);
+  -webkit-backdrop-filter: blur(6.3px);
 
   &__heading {
     font-size: 6.2rem;
@@ -171,7 +173,6 @@
     display: flex;
     justify-content: space-between;
   }
-
 
   &__logo {
     display: flex;
