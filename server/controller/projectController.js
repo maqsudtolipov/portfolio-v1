@@ -1,3 +1,5 @@
+const Project = require("../models/projectModel");
+
 // projects
 const projects = [
   {
@@ -17,28 +19,6 @@ const projects = [
   },
 ];
 
-//-- Param middleware
-exports.checkID = (req, res, next, val) => {
-  console.log(req.params.id * 1, projects.length);
-  if (req.params.id * 1 > projects.length) {
-    return res.status(404).json({
-      status: "fail",
-      message: "Invalid ID",
-    });
-  }
-  next();
-};
-
-exports.checkBody = (req, res, next) => {
-  if (!req.body.name || !req.body.description) {
-    return res.status(400).json({
-      status: "fail",
-      message: "Name and description are required",
-    });
-  }
-  next();
-};
-
 exports.getAllProjects = (req, res) => {
   res.status(200).json({
     status: "success",
@@ -52,7 +32,7 @@ exports.getAllProjects = (req, res) => {
 exports.getProject = (req, res) => {
   console.log(req.params);
 
-  project = projects.find((el) => el.id === req.params.id);
+  const project = projects.find((el) => el.id === req.params.id);
 
   res.status(200).json({
     status: "success",
@@ -62,15 +42,22 @@ exports.getProject = (req, res) => {
   });
 };
 
-exports.createProject = (req, res) => {
-  // console.log(req.body);
+exports.createProject = async (req, res) => {
+  try {
+    const newProject = await Project.create(req.body);
 
-  res.status(201).json({
-    status: "success",
-    data: {
-      projects: req.body,
-    },
-  });
+    res.status(201).json({
+      status: "success",
+      data: {
+        project: newProject,
+      },
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: "fail",
+      message: err,
+    });
+  }
 };
 
 exports.updateProject = (req, res) => {

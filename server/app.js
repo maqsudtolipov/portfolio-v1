@@ -1,11 +1,11 @@
-const dotenv = require("dotenv");
+
 const express = require("express");
 const projectRouter = require("./routes/projectRoutes");
 const morgan = require("morgan");
 
 const app = express();
 
-dotenv.config({ path: "./config.env" });
+
 
 // Middlewares
 if (process.env.NODE_ENV === "development") {
