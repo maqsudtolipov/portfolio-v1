@@ -38,17 +38,22 @@ exports.getAllProjects = async (req, res) => {
   }
 };
 
-exports.getProject = (req, res) => {
-  console.log(req.params);
+exports.getProject = async (req, res) => {
+  try {
+    const project = await Project.findById(req.params.id);
 
-  const project = projects.find((el) => el.id === req.params.id);
-
-  res.status(200).json({
-    status: "success",
-    data: {
-      project,
-    },
-  });
+    res.status(200).json({
+      status: "success",
+      data: {
+        project,
+      },
+    });
+  } catch (err) {
+    res.status(404).json({
+      status: "fail",
+      message: err,
+    });
+  }
 };
 
 exports.createProject = async (req, res) => {
