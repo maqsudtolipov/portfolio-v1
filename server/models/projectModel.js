@@ -10,7 +10,7 @@ const porjectSchema = new mongoose.Schema({
     type: String,
     required: [true, "A project description is required"],
   },
-  imgUrl: {
+  image: {
     type: String,
     required: [true, "A project image url is required"],
   },
