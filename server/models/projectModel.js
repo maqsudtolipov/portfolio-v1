@@ -6,10 +6,22 @@ const porjectSchema = new mongoose.Schema({
     required: [true, "A project name is required"],
     unique: true,
   },
-  imgUrl: String,
-  description: String,
-  github: String,
-  live: String,
+  description: {
+    type: String,
+    required: [true, "A project description is required"],
+  },
+  imgUrl: {
+    type: String,
+    required: [true, "A project image url is required"],
+  },
+  github: {
+    type: String,
+    required: [true, "A project github url is required"],
+  },
+  live: {
+    type: String,
+    required: [true, "A project live url is required"],
+  },
   tags: [String],
   createdAt: {
     type: Date,
