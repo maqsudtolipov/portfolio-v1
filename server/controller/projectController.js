@@ -19,14 +19,23 @@ const projects = [
   },
 ];
 
-exports.getAllProjects = (req, res) => {
-  res.status(200).json({
-    status: "success",
-    results: projects.length,
-    data: {
-      projects,
-    },
-  });
+exports.getAllProjects = async (req, res) => {
+  try {
+    const project = await Project.find();
+
+    res.status(200).json({
+      status: "success",
+      results: projects.length,
+      data: {
+        project,
+      },
+    });
+  } catch (err) {
+    res.status(404).json({
+      status: "fail",
+      message: err,
+    });
+  }
 };
 
 exports.getProject = (req, res) => {
