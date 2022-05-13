@@ -40,7 +40,7 @@ exports.getAllProjects = async (req, res) => {
 
 exports.getProject = async (req, res) => {
   try {
-    const project = await Project.findById(req.params._id);
+    const project = await Project.findById(req.params.id);
 
     res.status(200).json({
       status: "success",
