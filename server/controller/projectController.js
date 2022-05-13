@@ -74,13 +74,25 @@ exports.createProject = async (req, res) => {
   }
 };
 
-exports.updateProject = (req, res) => {
-  res.status(200).json({
-    status: "success",
-    data: {
-      tour: "<updated tour>",
-    },
-  });
+exports.updateProject = async (req, res) => {
+  try {
+    const project = await Project.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+      runValidators: true,
+    });
+
+    res.status(200).json({
+      status: "success",
+      data: {
+        project,
+      },
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: "fail",
+      message: err,
+    });
+  }
 };
 
 exports.deleteProject = (req, res) => {
