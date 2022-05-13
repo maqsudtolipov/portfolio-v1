@@ -3,9 +3,18 @@
 ////////////////////////////////////////
 const projectsContiner = document.querySelector("#projects");
 
+const renderSpinner = function (parenEl) {
+  const markup = `
+  Loading ...
+  `;
+  parenEl.innerHTML = "";
+  parenEl.insertAdjacentHTML("afterbegin", markup);
+};
+
 const showProject = async function () {
   try {
     // Loading project
+    renderSpinner(projectsContiner);
     const res = await fetch(
       "https://maqsud-me.herokuapp.com/api/v1/projects/627ea2f9176c6b5edfa5bbbc"
     );
