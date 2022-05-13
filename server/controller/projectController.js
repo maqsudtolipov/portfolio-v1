@@ -95,9 +95,18 @@ exports.updateProject = async (req, res) => {
   }
 };
 
-exports.deleteProject = (req, res) => {
-  res.status(204).json({
-    status: "success",
-    data: null,
-  });
+exports.deleteProject = async (req, res) => {
+  try {
+    await Project.findByIdAndDelete(req.params.id);
+
+    res.status(204).json({
+      status: "success",
+      data: null,
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: "fail",
+      message: err,
+    });
+  }
 };
