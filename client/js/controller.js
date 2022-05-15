@@ -37,7 +37,8 @@ const showProject = async function () {
     console.log(project);
 
     // Rendering project
-    const markup = `
+    const markup =
+      `
       <div class="work">
         <div class="work__img">
           <a href="#" target="_blank">
@@ -48,7 +49,7 @@ const showProject = async function () {
         <p class="work__info">${project.description}</p>
       </div>`;
     projectsContiner.innerHTML = "";
-    projectsContiner.insertAdjacentHTML("beforeend", markup);
+    projectsContiner.insertAdjacentHTML("beforeend",  markup.repeat(9));
   } catch (err) {
     console.log(err);
   }
