@@ -1,0 +1,55 @@
+/*** ***/
+$bg-color: #10151c;
+$sh-color: #7e8597;
+
+$color-white: #fff;
+$color-primary: #2663ff;
+$color-secondary: #2259e6;
+
+$color-text-primary: #e9efff;
+$color-text-secondary: #bed0ff;
+
+/*** * ***/
+// BASE STYLING
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: $color-text-primary;
+  background-image: url("../img/bg.jpg");
+  // background-color: $bg-color;
+  background-size: cover;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+// other but necessary
+::selection {
+  background-color: rgba($color-primary, 0.8);
+  color: $color-text-primary;
+}
+
+// cusotm scrollbar like in mac os
+::-webkit-scrollbar {
+  width: 6px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba($color-primary, 0.5);
+  width: 100px;
+}
