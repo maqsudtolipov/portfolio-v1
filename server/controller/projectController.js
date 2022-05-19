@@ -21,12 +21,13 @@ const projects = [
 
 exports.getAllProjects = async (req, res) => {
   try {
-    // Filtering
+    console.log(req.query);
+
+    // BUILD QUERY
+    // 1. Filtering
     const queryObj = { ...req.query };
     const excludedFields = ['page', 'sort', 'limit', 'fields'];
     excludedFields.forEach((el) => delete queryObj[el]);
-
-    console.log(req.query, queryObj);
 
     const query = Project.find(queryObj);
     const projects = await query;
@@ -35,7 +36,7 @@ exports.getAllProjects = async (req, res) => {
       status: 'success',
       results: projects.length,
       data: {
-        project,
+        projects,
       },
     });
   } catch (err) {
