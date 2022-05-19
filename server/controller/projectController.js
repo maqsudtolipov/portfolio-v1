@@ -29,7 +29,11 @@ exports.getAllProjects = async (req, res) => {
     const excludedFields = ['page', 'sort', 'limit', 'fields'];
     excludedFields.forEach((el) => delete queryObj[el]);
 
-    const query = Project.find(queryObj);
+    let query = Project.find(queryObj);
+
+    // 2. Sorting default
+    query = query.sort('-createdAt');
+
     const projects = await query;
 
     res.status(200).json({
