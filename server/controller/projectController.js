@@ -32,7 +32,20 @@ exports.getAllProjects = async (req, res) => {
     let query = Project.find(queryObj);
 
     // 2. Sorting default
-    query = query.sort('-createdAt');
+    if (req.query.sort) {
+      const sortBy = req.query.sort.split(',').join(' ');
+      query = query.sort(sortBy);
+    } else {
+      query = query.sort('-createdAt');
+    }
+
+    // 2.1 Sort by tags
+    if (req.query.tags) {
+      const tags = req.query.tags.split(',').join(' ');
+      query = query.sort(tags);
+    } else {
+      query = query.sort('-createdAt');
+    }
 
     // 3. Fields limiting
     if (req.query.fields) {
