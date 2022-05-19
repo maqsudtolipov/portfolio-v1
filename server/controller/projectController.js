@@ -34,6 +34,14 @@ exports.getAllProjects = async (req, res) => {
     // 2. Sorting default
     query = query.sort('-createdAt');
 
+    // 3. Fields limiting
+    if (req.query.fields) {
+      const fields = req.query.fields.split(',').join(' ');
+      query = query.select(fields);
+    } else {
+      query = query.select('-__v');
+    }
+
     const projects = await query;
 
     res.status(200).json({
