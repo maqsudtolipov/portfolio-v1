@@ -42,6 +42,20 @@ exports.getAllProjects = async (req, res) => {
       query = query.select('-__v');
     }
 
+    // 4. Pagination
+    const page = +req.query.page || 1;
+    const limit = +req.query.limit || 16;
+    const skip = (page - 1) * limit; // page 1 = skip 0, page 2 = skip 16, page 3 = skip 32
+
+    query = query.skip(skip).limit(limit);
+
+    if (req.query.page) {
+      const numProjects = await Project.countDocuments();
+      if (skip >= numProjects) {
+        throw new Error('This page does not exist');
+      }
+    }
+
     const projects = await query;
 
     res.status(200).json({
@@ -54,7 +68,7 @@ exports.getAllProjects = async (req, res) => {
   } catch (err) {
     res.status(404).json({
       status: 'fail',
-      message: err,
+      message: err.message,
     });
   }
 };
