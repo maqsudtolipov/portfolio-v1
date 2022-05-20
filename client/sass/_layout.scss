@@ -58,9 +58,9 @@
 }
 
 // work
-.work {
+.project {
   &:hover {
-    .work__img {
+    .project__img {
       transform: scale(1.05);
     }
   }
@@ -83,7 +83,71 @@
   &__title {
     font-size: 2.4rem;
     font-weight: 500;
-    margin-bottom: 0.4rem;
+    margin-bottom: 1.6rem;
+  }
+
+  &__tags {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  &__tag {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: $color-primary;
+    border-radius: 4px;
+    padding: 0.6rem 1.2rem;
+    background-color: rgba($color-primary, 0.1);
+    transition: all 0.3s;
+
+    &:hover {
+      // background-color: $color-primary;
+      // color: $color-white;
+    }
+
+    &--html {
+      color: #f97316;
+      background-color: rgba(#f97316, 0.1);
+    }
+
+    &--css {
+      color: #3b82f6;
+      background-color: rgba(#3b82f6, 0.1);
+    }
+
+    &--sass {
+      color: #c69;
+      background-color: rgba(#c69, 0.1);
+    }
+
+    &--javascript {
+      color: #eab308;
+      background-color: rgba(#eab308, 0.1);
+    }
+
+    &--nodejs {
+      color: #84cc16;
+      background-color: rgba(#84cc16, 0.1);
+    }
+
+    &--react {
+      color: #61dafb;
+      background-color: rgba(#61dafb, 0.1);
+    }
+
+    &--express {
+      color: #f43f5e;
+      background-color: rgba(#f43f5e, 0.1);
+    }
+
+    &--mongodb {
+      color: #22c55e;
+      background-color: rgba(#22c55e, 0.1);
+    }
   }
 
   &__info {
@@ -95,7 +159,7 @@
 /*** CONTACT SECTION ***/
 .section-contact {
   padding: 12.8rem 0 14rem 0;
-  background-image: url("../img/contact.jpg");
+  background-image: url('../img/contact.jpg');
 }
 
 .cta {

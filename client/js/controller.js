@@ -54,6 +54,6 @@ const showProject = async function () {
     console.log(err);
   }
 };
-showProject();
+// showProject();
 
 console.log("re");
