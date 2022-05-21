@@ -46,7 +46,11 @@
     }
 
     &__info {
-      font-size: 1.2rem;
+      font-size: 1.6rem;
+    }
+
+    &__links a {
+      font-size: 2rem;
     }
   }
 
@@ -169,6 +173,12 @@
     width: auto;
   }
 
+  .project {
+    &__tag {
+      font-size: 1rem;
+    }
+  }
+
   /*** CONTACT SECTION ***/
   .cta {
     grid-template-columns: 2fr 3fr;
@@ -210,11 +220,11 @@
   /*** PORTFOLIO ***/
   .project {
     &__title {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
 
     &__info {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
     }
   }
 
