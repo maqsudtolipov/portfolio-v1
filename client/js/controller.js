@@ -66,7 +66,7 @@ const showProjects = async function () {
             <a href="${project.github}" target="_blank">
               <ion-icon name="logo-github"></ion-icon>
             </a>
-            <a href="${project.github}" target="_blank">
+            <a href="${project.live}" target="_blank">
               <ion-icon name="link-outline"></ion-icon>
             </a>
           </div>
