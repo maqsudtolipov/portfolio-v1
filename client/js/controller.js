@@ -2,6 +2,7 @@
 
 ////////////////////////////////////////
 const projectsContiner = document.querySelector('#projects');
+const tagsContainer = document.querySelector('.tags');
 
 const renderSpinner = function (parenEl) {
   const markup = `
@@ -22,6 +23,18 @@ const renderSpinner = function (parenEl) {
   parenEl.insertAdjacentHTML('afterbegin', markup);
 };
 
+const renderTags = function (tags) {
+  let markup = '';
+
+  tags.forEach((tag) => {
+    markup += `
+    <li class="project__tag project__tag--${tag}">${tag.toUpperCase()}</li>
+    `;
+  });
+
+  return markup;
+};
+
 const showProjects = async function () {
   try {
     // Loading project
@@ -32,7 +45,6 @@ const showProjects = async function () {
     if (!res.ok) throw new Error(`${data.message.message} (${res.status})`);
 
     let projects = data.data.projects;
-    console.log(projects);
 
     // Rendering project
 
@@ -61,18 +73,10 @@ const showProjects = async function () {
         </div>
 
         <ul class="project__tags">
-          <li class="project__tag project__tag--html">HTML</li>
-          <li class="project__tag project__tag--css">CSS</li>
-          <li class="project__tag project__tag--javascript">JavaScript</li>
-          <li class="project__tag project__tag--sass">Sass</li>
-          <li class="project__tag project__tag--react">React</li>
-          <li class="project__tag project__tag--nodejs">NodeJS</li>
-          <li class="project__tag project__tag--express">Express</li>
-          <li class="project__tag project__tag--mongodb">MongoDB</li>
+          ${renderTags(project.tags)}
         </ul>
         <p class="project__info">${project.description}</p>
         </div>`;
-
       projectsContiner.insertAdjacentHTML('beforeend', markup);
     });
   } catch (err) {
@@ -80,5 +84,3 @@ const showProjects = async function () {
   }
 };
 showProjects();
-
-console.log('%Hackermann!!!', 'color: #fff, background: #2663ff');
