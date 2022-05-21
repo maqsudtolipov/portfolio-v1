@@ -36,6 +36,8 @@ const showProjects = async function () {
 
     // Rendering project
 
+    projectsContiner.innerHTML = '';
+
     projects.forEach((project) => {
       const markup = `
         <div class="project">
@@ -71,7 +73,6 @@ const showProjects = async function () {
         <p class="project__info">${project.description}</p>
         </div>`;
 
-      projectsContiner.innerHTML = '';
       projectsContiner.insertAdjacentHTML('beforeend', markup);
     });
   } catch (err) {
