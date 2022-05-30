@@ -34,8 +34,16 @@
   &-link:link,
   &-link:visited {
     font-size: 1.8rem;
+    font-weight: 500;
     text-decoration: none;
     color: $color-white;
+    transition: all 0.3s;
+  }
+
+  &-link:hover,
+  &-link:active {
+    color: #3b82f6;
+    text-shadow: 0 0 2rem #3b82f680;
   }
 }
 
@@ -237,7 +245,7 @@
     font-family: inherit;
     font-size: 1.6rem;
     color: $color-text-primary;
-    background-color: rgba($color-text-primary, 0.1);
+    background-color: #27272ac9;
     transition: all 0.3s;
     box-shadow: 0 1px 2px #0000001a;
   }
